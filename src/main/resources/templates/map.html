@@ -32,14 +32,30 @@
   </form>
   <ul class="geocodes"></ul>
   <div>
-    <table class="table-bordered">
-      <tr th:each="offer : ${offers}">
-        <td th:text="${offer.url}">1</td>
-        <td><a href="#" th:text="${offer.title}">Title ...</a></td>
-        <td th:text="${offer.description}">Text ...</td>
-        <td th:text="${offer.publishTime}">Text ...</td>
-        <td th:text="${offer.price}">Text ...</td>
+    <table class="table-bordered table" th:each="offer : ${offers}">
+      <caption>Offers by Criteria</caption>
+      <thead>
+      <tr>
+        <th>URL</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Publish Time</th>
+        <th>Price</th>
+        <th>Distance from start</th>
+        <th>Duration o travel by Car</th>
       </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><a th:text="${offer.url}"></a></td>
+        <td th:text="${offer.title}"></td>
+        <td th:text="${offer.description}"></td>
+        <td th:text="${offer.publishTime}"></td>
+        <td th:text="${offer.price}"></td>
+        <td th:text="${offer.distance}+' meters'"></td>
+        <td th:text="${offer.duration}+' seconds'"></td>
+      </tr>
+      </tbody>
     </table>
   </div>
 </div>
