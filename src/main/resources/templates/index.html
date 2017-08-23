@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Search form</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Search by criteria</h1>
+<form action="#" th:action="@{/getAds/}" method="get">
+  <p>Minimal Price: <input type="text" name="minPrice"/></p>
+  <p>Maximal Price: <input type="text" name="maxPrice"/></p>
+  <p>Maximal Distance: <input type="text" name="maxDist"/></p>
+  <p>Street: <input type="text" name="street"/></p>
+  <p>Rooms: <input type="text" name="rooms"/></p>
+  <p>Max Duration of travel by foot: <input type="text" name="maxTravel"/></p>
+  <p>Max Duration of travel by Bicykle: <input type="text" name="maxBic"/></p>
+  <p>Max Duration of travel by Drive: <input type="text" name="maxDrive"/></p>
+  <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"/></p>
+</form>
+</body>
+</html>
