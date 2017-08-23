@@ -1,5 +1,6 @@
-package com.codecool.olxpathfinder.geocoding;
+package com.codecool.olxpathfinder.controller;
 
+import com.codecool.olxpathfinder.geocoding.GeocodingFilter;
 import com.codecool.olxpathfinder.model.Offer;
 import com.google.maps.errors.ApiException;
 import java.io.IOException;
